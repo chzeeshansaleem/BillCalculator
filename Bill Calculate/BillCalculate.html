@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .pic{
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+  </head>
+  <body>
+      <div>
+           
+    <table class="table container table-bordered text-center">
+        
+        <thead class="thead-dark">
+            <th>Coffee</th>
+            <th>Price</th>
+            <th>Quantity</th>
+
+        </thead>
+        <tr>
+            <td>Capochino</td>
+            <td>400</td>
+            <td> <input type="text" id="we1"></td>
+        </tr>
+        <tr>
+        <td>Death wish Coffee</td>
+            <td>400</td>
+            <td> <input type="text" id="we2"></td>
+        </tr>
+        <tr>
+            <td>French Coffee</td>
+                <td>400</td>
+                <td> <input type="text" id="we3"></td>
+       </tr>
+       <tr>
+        <td>Rising Sun Brazil Coffee</td>
+            <td>400</td>
+            <td> <input type="text" id="we4"></td>
+   </tr>
+   <tr>
+    <td>Lazzaa Coffee</td>
+        <td>400</td>
+        <td> <input type="text" id="we5"></td>
+</tr>
+<tr>
+    <td>Gold Cona Coffee</td>
+        <td>400</td>
+        <td> <input type="text" id="we6"></td>
+</tr>
+     <tr>
+        
+        <td> <button onclick="order()" class="btn btn-primary btn-block">Total price (Rs)</button>
+            <td class="alert alert-success" id="show" ></td>
+        </td>
+        <td> <button onclick="Delete()" class="btn btn-primary btn-block">Clear The order</button></td>
+    </tr>
+    <tr>
+        </tr>
+        <td> <button class="btn btn-primary btn-block" onclick="submit_order()">Place Order</button></td>
+    </tr>
+        
+
+    </table>
+</div>
+
+    <script>
+        // var num1, num2, sum;
+        // num1 = parseFloat(prompt("Enter 1st number:"));
+        // num2 = parseFloat(prompt("Enter 2nd number:"));
+        // sum = num1 + num2;
+        // document.write("The total is " + sum);
+        // let num1, num2, sum;
+        // num1 = parseInt(prompt("ist"));
+        // num2 = parseInt(prompt("2st"));
+        //    sum=num1 +num2;
+        //    document.write(sum)
+        function order() {
+            var name, name1,name3,name4,name5,name6;
+            var temp1,temp2,temp3,temp4,temp5,temp6;
+            name = document.getElementById("we1").value;
+            name1 = document.getElementById("we2").value;
+            name3 = document.getElementById("we3").value;
+            name4 = document.getElementById("we4").value;
+            name5 = document.getElementById("we5").value;
+            name6 = document.getElementById("we6").value;
+            
+            
+             temp1= name * 400;
+             temp2= name1 * 400;
+             temp3= name3 * 400;
+             temp4= name4 * 400;
+             temp5= name5 * 400;
+             temp6= name6 * 400;
+             
+             
+            var total = temp1+temp2+temp3+temp4+temp5+temp6;
+            document.getElementById("show").innerHTML = total;
+        }
+        function Delete()
+        {   var name, name1,name3,name4,name5,name2;
+            name = document.getElementById("we1").value = null;
+            name1 = document.getElementById("we2").value  = null;
+            name2 = document.getElementById("we3").value  = null;
+            name3 = document.getElementById("we4").value  = null;
+            name4 = document.getElementById("we5").value  = null;
+            name5 = document.getElementById("we6").value  = null;
+            document.getElementById("show").innerHTML = total=null;
+        }
+
+        function submit_order(){
+            var name, name1,name3,name4,name5,name6,name7;
+            var no1,no2,no3,no4,no5,no6;
+            
+            name = document.getElementById("we1").value = null;
+            name1 = document.getElementById("we2").value  = null;
+            name2 = document.getElementById("we3").value  = null;
+            name3 = document.getElementById("we4").value  = null;
+            name4 = document.getElementById("we5").value  = null;
+            name5 = document.getElementById("we6").value  = null;
+            document.getElementById("show").innerHTML = total=null;
+
+
+
+            alert("Your Order Placed");
+        }
+    </script>
+    
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
